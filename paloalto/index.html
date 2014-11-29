@@ -1,128 +1,8 @@
 <html>
   <head>
   <title>Palo Alto City Council Election Results 2014</title>
+    <link rel="stylesheet" href="test.css" type="text/css">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Votes', 'KAREN HOLMAN', 'NANCY SHEPHERD', 'GREG SCHARFF', 'SEELAM-SEA REDDY', 'A.C. JOHNSTON', 'WAYNE DOUGLASS', 'TOM DUBOIS', 'CORY WOLBACH', 'MARK WEISS', 'JOHN KARL FREDRICH', 'ERIC FILSETH', 'LYDIA KOU'],
-          ['11/4/2014', 6551, 3881, 5860, 773, 3099, 597, 5892, 4664, 1330, 1246, 5393, 4698],
-          ['11/5/2014',  6860, 4075, 6133, 802, 3238, 620, 6161, 4880, 1387, 1302, 5631, 4913],
-          ['11/6/2014',  7741, 4625, 6952, 896, 3690, 698, 6950, 5543, 1564, 1440, 6347, 5581],
-          ['11/7/2014',  9909, 5892, 8976, 1110, 4636, 835, 8874, 7260, 1898, 1791, 8146, 7059],
-          ['11/8/2014',  10839, 6409, 9741, 1198, 5019, 889, 9723, 7919, 2062, 1962, 8924, 7753],
-          ['11/9/2014 (part 1)',  10895, 6445, 9789, 1203, 5042, 899, 9767, 7953, 2074, 1972, 8965, 7799],
-          ['11/9/2014 (part 2)',  10931, 6471, 9827, 1205, 5070, 905, 9792, 7993, 2079, 1977, 8990, 7821],
-          ['11/10/2014',  10978, 6502, 9868, 1214, 5086, 906, 9830, 8021, 2089, 1990, 9032, 7864],
-          ['11/11/2014',  11066, 6549, 9948, 1220, 5129, 915, 9907, 8078, 2115, 1999, 9096, 7923],
-          ['11/13/2014',  11067, 6549, 9949, 1220, 5129, 915, 9908, 8079, 2115, 1999, 9097, 7923],
-          ['11/14/2014',  11066, 6549, 9948, 1220, 5129, 915, 9907, 8078, 2115, 1999, 9096, 7923],
-          ['11/16/2014',  11281, 6724, 10145, 1270, 5239, 954, 10097, 8235, 2171, 2046, 9248, 8100]
-        ]);
-
-        var options = {
-          title: 'Election Results (Votes)',
-		  curveType: 'function'
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-        chart.draw(data, options);
-      }
-    </script>
-	
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Percentage', 'KAREN HOLMAN', 'NANCY SHEPHERD', 'GREG SCHARFF', 'SEELAM-SEA REDDY', 'A.C. JOHNSTON', 'WAYNE DOUGLASS', 'TOM DUBOIS', 'CORY WOLBACH', 'MARK WEISS', 'JOHN KARL FREDRICH', 'ERIC FILSETH', 'LYDIA KOU'],
-          ['11/4/2014', 0.14890, 0.08820, 0.13320, 0.01760, 0.07050, 0.01360, 0.13400, 0.10600, 0.03020, 0.02830, 0.12260, 0.10680],
-          ['11/5/2014',  0.14910, 0.08860, 0.13330, 0.01740, 0.07040, 0.01350, 0.13390, 0.10610, 0.03020, 0.02830, 0.12240, 0.10680],
-          ['11/6/2014',  0.14880, 0.08890, 0.13360, 0.01720, 0.07090, 0.01340, 0.13360, 0.10650, 0.03010, 0.02770, 0.12200, 0.10730],
-          ['11/7/2014',  0.14930, 0.08880, 0.13520, 0.01670, 0.06980, 0.01260, 0.13370, 0.10940, 0.02860, 0.02700, 0.12270, 0.10630],
-          ['11/8/2014',  0.14960, 0.08850, 0.13450, 0.01650, 0.06930, 0.01230, 0.13420, 0.10930, 0.02850, 0.02710, 0.12320, 0.10700],
-          ['11/9/2014 (part 1)',  0.14970, 0.08850, 0.13450, 0.01650, 0.06930, 0.01230, 0.13420, 0.10920, 0.02850, 0.02710, 0.12310, 0.10710],
-          ['11/9/2014 (part 2)',  0.14960, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10940, 0.02850, 0.02710, 0.12300, 0.10700],
-          ['11/10/2014',  0.14960, 0.08860, 0.13450, 0.01650, 0.06930, 0.01230, 0.13400, 0.10930, 0.02850, 0.02710, 0.12310, 0.10720],
-          ['11/11/2014',  0.14970, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10920, 0.02860, 0.02700, 0.12300, 0.10710],
-          ['11/13/2014',  0.14970, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10920, 0.02860, 0.02700, 0.12300, 0.10710],
-          ['11/14/2014',  0.14940, 0.08900, 0.13440, 0.01680, 0.06940, 0.01260, 0.13380, 0.10910, 0.02870, 0.02710, 0.12250, 0.10720],
-          ['11/16/2014',  0.14940, 0.08900, 0.13440, 0.01680, 0.06940, 0.01260, 0.13370, 0.10910, 0.02880, 0.02710, 0.12250, 0.10730]
-        ]);
-
-        var options = {
-          title: 'Election Results (Percent)',
-		  curveType: 'function'
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div1'));
-
-        chart.draw(data, options);
-      }
-    </script>
-	    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Votes', 'CORY WOLBACH', 'LYDIA KOU'],
-          ['11/4/2014', 4664, 4698],
-          ['11/5/2014', 4880, 4913],
-          ['11/6/2014', 5543, 5581],
-          ['11/7/2014', 7260, 7059],
-          ['11/8/2014', 7919, 7753],
-          ['11/9/2014 (part 1)', 7953, 7799],
-          ['11/9/2014 (part 2)', 7993, 7821],
-          ['11/10/2014', 8021, 7864],
-          ['11/11/2014', 8078, 7923],
-          ['11/13/2014', 8079, 7923],
-          ['11/14/2014', 8078, 7923],
-          ['11/16/2014', 8235, 8100]
-        ]);
-
-        var options = {
-          title: 'Election Results (Votes for just Cory and Lydia)'
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_divcl'));
-
-        chart.draw(data, options);
-      }
-    </script>
-	
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Percentage', 'CORY WOLBACH', 'LYDIA KOU'],
-          ['11/4/2014', 0.10600, 0.10680],
-          ['11/5/2014', 0.10610, 0.10680],
-          ['11/6/2014', 0.10650, 0.10730],
-          ['11/7/2014', 0.10940, 0.10630],
-          ['11/8/2014', 0.10930, 0.10700],
-          ['11/9/2014 (part 1)',  0.10920, 0.10710],
-          ['11/9/2014 (part 2)',  0.10940, 0.10700],
-          ['11/10/2014',  0.10930, 0.10720],
-          ['11/11/2014',  0.10920, 0.10710],
-          ['11/13/2014',  0.10920, 0.10710],
-          ['11/14/2014',  0.10910, 0.10720],
-          ['11/16/2014',  0.10910, 0.10730]
-        ]);
-
-        var options = {
-          title: 'Election Results (Percent for Cory and Lydia)',
-		  curveType: 'function'
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_divcl1'));
-
-        chart.draw(data, options);
-      }
-    </script>
 	<script type="text/javascript">
 google.load("visualization", '1', {packages:['corechart']});
 google.setOnLoadCallback(drawChart);
@@ -139,17 +19,18 @@ function handleQueryResponse(response) {
   }
 
   var data = response.getDataTable();
+  var options = {
+      title: 'Election Results (Votes)',
+        };
   var chart = new google.visualization.LineChart(document.getElementById('columnchart'));
-  chart.draw(data, options } });
+  chart.draw(data, options, { legend: { position: 'bottom' } });
 }
 </script>
+	
   </head>
   <body>
-  Palo Alto City Council Election Results 2014<br>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-	<div id="chart_div1" style="width: 900px; height: 500px;"></div>
-	<div id="chart_divcl" style="width: 900px; height: 500px;"></div>
-	<div id="chart_divcl1" style="width: 900px; height: 500px;"></div>
-	<div id="columnchart" style="width: 900px; height: 500px;"></span>
+  <div class="width-container"><h1>Palo Alto City Council Election Results 2014</h1>
+	<div id="columnchart" style="width: 900px; height: 500px;"></div>
+	Data can viewed on this <a href="https://docs.google.com/spreadsheets/d/1GxTnn3ffNSUJ_O2zr-NOPWjv7Ox3M15zBDk7Rc-14ZY/edit?usp=sharing" target="_blank">spreadsheet</a>.</div>
   </body>
 </html>
