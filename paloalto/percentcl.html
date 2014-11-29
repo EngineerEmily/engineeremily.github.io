@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="test.css" type="text/css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Percentage', 'CORY WOLBACH', 'LYDIA KOU'],
+          ['11/4/2014', 0.10600, 0.10680],
+          ['11/5/2014', 0.10610, 0.10680],
+          ['11/6/2014', 0.10650, 0.10730],
+          ['11/7/2014', 0.10940, 0.10630],
+          ['11/8/2014', 0.10930, 0.10700],
+          ['11/9/2014 (part 1)',  0.10920, 0.10710],
+          ['11/9/2014 (part 2)',  0.10940, 0.10700],
+          ['11/10/2014',  0.10930, 0.10720],
+          ['11/11/2014',  0.10920, 0.10710],
+          ['11/13/2014',  0.10920, 0.10710],
+          ['11/14/2014',  0.10910, 0.10720],
+          ['11/16/2014',  0.10910, 0.10730]
+        ]);
+
+        var options = {
+          title: 'Election Results (Percent for Cory and Lydia)',
+		  curveType: 'function'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_divcl1'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	
+  </head>
+  <body><div id="chart_divcl1" style="width: 900px; height: 500px;"></div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="test.css" type="text/css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Votes', 'CORY WOLBACH', 'LYDIA KOU'],
+          ['11/4/2014', 4664, 4698],
+          ['11/5/2014', 4880, 4913],
+          ['11/6/2014', 5543, 5581],
+          ['11/7/2014', 7260, 7059],
+          ['11/8/2014', 7919, 7753],
+          ['11/9/2014 (part 1)', 7953, 7799],
+          ['11/9/2014 (part 2)', 7993, 7821],
+          ['11/10/2014', 8021, 7864],
+          ['11/11/2014', 8078, 7923],
+          ['11/13/2014', 8079, 7923],
+          ['11/14/2014', 8078, 7923],
+          ['11/16/2014', 8235, 8100]
+        ]);
+
+        var options = {
+          title: 'Election Results (Votes for just Cory and Lydia)'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_divcl'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	
+  </head>
+  <body><div id="chart_divcl" style="width: 900px; height: 500px;"></div>
+</div>
+  </body>
+</html>
