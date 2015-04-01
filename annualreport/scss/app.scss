@@ -40,9 +40,33 @@
 //   "foundation/components/visibility";
 
 $primary-color: white;
-body {
-	background: $primary-color;
+header {
+	background: black;
+	color: $primary-color;
+	opacity: .8;
+	filter: alpha(opacity=80);
+	}
+
+h1 {
+	color: $primary-color;
 	}
 	
+body {
+	background: $primary-color;
+	background: url(madeatthetech.jpg);
+    background-size: 100%;
+	}
+	
+main {
+	background: $primary-color;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+	}
+
+section {
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+	background: $primary-color;
+	}
 
 
