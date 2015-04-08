@@ -56,8 +56,6 @@ header {
 	padding-left: 15px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	font-family: $font-family;
-	font-weight: 300;
 	}
 	
 h1 {
@@ -90,6 +88,14 @@ h4 {
 	text-align: center;
 }
 
+h5 {
+	font-family: $font-family;
+	font-weight: bold;
+	text-align: right;
+	color: #5ad5fd;
+	font-size: 16px;
+}
+
 body {
 	background: $primary-color;
 	background: url(madeatthetech.jpg);
@@ -108,7 +114,7 @@ main {
 	padding-bottom: 15px;	
 	}
 
-section {
+nav {
 	opacity: 0.8;
     filter: alpha(opacity=80);
 	background: $primary-color;
@@ -134,7 +140,7 @@ figcaption {
 	font-family: $font-family;
 	}
 @media (max-width:641px) {
-	section {
+	nav {
 		display: none;
 		visibility: hidden;
 	}
