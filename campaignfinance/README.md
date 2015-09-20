@@ -1,7 +1,7 @@
-OpenCalifornia
+California Campaign Finance Ordinace Grid
 ========================
 
-OpenCalifornia is a coalition of Code for America brigades in California.
+Made by Emily Ann Ramos
 
 ## About this Project
 We're crowdsourcing the status of state agency open data practices. The State of California currently lacks a coordinated and strategic open data strategy. However, there are pockets of activity whereby some departments are publishing their datasets in machine-readable formats. This project exists to track that progress.
