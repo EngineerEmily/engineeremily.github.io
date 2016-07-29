@@ -6,6 +6,9 @@
 	<script type="text/javascript">
 google.load("visualization", '1', {packages:['corechart']});
 google.setOnLoadCallback(drawChart);
+
+google.setOnLoadCallback(drawChart1);
+
 function drawChart() {
   var query = new google.visualization.Query(
       'https://docs.google.com/spreadsheets/d/1GxTnn3ffNSUJ_O2zr-NOPWjv7Ox3M15zBDk7Rc-14ZY/edit#gid=801569879');
@@ -25,12 +28,41 @@ function handleQueryResponse(response) {
   var chart = new google.visualization.LineChart(document.getElementById('columnchart'));
   chart.draw(data, options, { legend: { position: 'bottom' } });
 }
+
+      function drawChart1() {
+        var data = google.visualization.arrayToDataTable([
+          ['Percentage', 'KAREN HOLMAN', 'NANCY SHEPHERD', 'GREG SCHARFF', 'SEELAM-SEA REDDY', 'A.C. JOHNSTON', 'WAYNE DOUGLASS', 'TOM DUBOIS', 'CORY WOLBACH', 'MARK WEISS', 'JOHN KARL FREDRICH', 'ERIC FILSETH', 'LYDIA KOU'],
+          ['11/4/2014', 0.14890, 0.08820, 0.13320, 0.01760, 0.07050, 0.01360, 0.13400, 0.10600, 0.03020, 0.02830, 0.12260, 0.10680],
+          ['11/5/2014',  0.14910, 0.08860, 0.13330, 0.01740, 0.07040, 0.01350, 0.13390, 0.10610, 0.03020, 0.02830, 0.12240, 0.10680],
+          ['11/6/2014',  0.14880, 0.08890, 0.13360, 0.01720, 0.07090, 0.01340, 0.13360, 0.10650, 0.03010, 0.02770, 0.12200, 0.10730],
+          ['11/7/2014',  0.14930, 0.08880, 0.13520, 0.01670, 0.06980, 0.01260, 0.13370, 0.10940, 0.02860, 0.02700, 0.12270, 0.10630],
+          ['11/8/2014',  0.14960, 0.08850, 0.13450, 0.01650, 0.06930, 0.01230, 0.13420, 0.10930, 0.02850, 0.02710, 0.12320, 0.10700],
+          ['11/9/2014 (part 1)',  0.14970, 0.08850, 0.13450, 0.01650, 0.06930, 0.01230, 0.13420, 0.10920, 0.02850, 0.02710, 0.12310, 0.10710],
+          ['11/9/2014 (part 2)',  0.14960, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10940, 0.02850, 0.02710, 0.12300, 0.10700],
+          ['11/10/2014',  0.14960, 0.08860, 0.13450, 0.01650, 0.06930, 0.01230, 0.13400, 0.10930, 0.02850, 0.02710, 0.12310, 0.10720],
+          ['11/11/2014',  0.14970, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10920, 0.02860, 0.02700, 0.12300, 0.10710],
+          ['11/13/2014',  0.14970, 0.08860, 0.13450, 0.01650, 0.06940, 0.01240, 0.13400, 0.10920, 0.02860, 0.02700, 0.12300, 0.10710],
+          ['11/14/2014',  0.14940, 0.08900, 0.13440, 0.01680, 0.06940, 0.01260, 0.13380, 0.10910, 0.02870, 0.02710, 0.12250, 0.10720],
+          ['11/16/2014',  0.14940, 0.08900, 0.13440, 0.01680, 0.06940, 0.01260, 0.13370, 0.10910, 0.02880, 0.02710, 0.12250, 0.10730]
+        ]);
+
+        var options = {
+          title: 'Election Results (Percent)',
+		  curveType: 'function'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div1'));
+
+        chart.draw(data, options);
+      }
+
 </script>
 
   </head>
   <body>
   <div class="width-container"><h1>Palo Alto City Council Election Results 2014</h1>
-<div id="columnchart" style="width: 900px; height: 500px;">
+<div id="columnchart" style="width: 900px; height: 500px;"></div>
+  <body><div id="chart_div1" style="width: 900px; height: 500px;"></div>
   <br>
 	<a href="votesall.html" target="results">Results (Votes)</a> - <a href="percentall.html" target="results">Results (Percentage)</a> - <a href="votescl.html" target="results">Results Cory/Lydia (Votes)</a> - <a href="percentcl.html" target="results">Results Cory/Lydia (Percentage)</a><br><br>
 	Data Set can be viewed on this <a href="https://docs.google.com/spreadsheets/d/1GxTnn3ffNSUJ_O2zr-NOPWjv7Ox3M15zBDk7Rc-14ZY/edit?usp=sharing" target="_blank">spreadsheet</a>.</div>
